@@ -7,7 +7,7 @@
 - Also see `example-api/routes/api.php`
 - For database schema see `example-api/database/migrations/schema.sql`
 
-The requirement for not updating the **from** user could either be satisfied with a DB trigger or in the code itself. My choice would be to put in the code for an update (PUT) request ratherthan the DB.
+The requirement for not updating the **from** user could either be satisfied with a DB trigger or in the code itself. My choice would be to put the logic in the code for an update (PUT) request rather than a DB trigger.
 
 ## Overview
 
