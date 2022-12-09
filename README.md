@@ -1,5 +1,11 @@
 # PHP / JS Code Exercise
 
+## Notes
+
+### For quick examples I have used Laravel PHP framework for the backend API example.
+
+## The requirement for not updating the **from** user could either be satisfied with a DB trigger or in the code itself. My choice would be to put in the code for an update (PUT) request ratherthan the DB.
+
 ## Overview
 
 This is a 2 part offline exercise to demonstrate general knowledge of PHP and JS.
