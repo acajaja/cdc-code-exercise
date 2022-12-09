@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Review</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="module">
+        import { getMessage } from './js/pennant.js'
+        let messageHtml = '';
+
+        (async () => {
+            try {
+                const message = await getMessage(8787)
+                const creation = new Date(message.created)
+                const modified = new Date(message.updated)
+                messageHtml = `<p><strong class="title">${message.title}</strong><br>
+                    <strong>From:</strong> ${message.from.first_name} ${message.from.last_name}<br>
+                    <strong>To:</strong> ${message.to.first_name} ${message.to.last_name}</p>
+                    <p>${message.body}</p>
+                    <p><small>Created: ${creation}<br>
+                    Modified: ${modified}</p>`
+            }
+            catch (error) {
+                messageHtml = 'No message available'
+            }
+
+            const messageNode = document.getElementsByClassName('message-request')
+            if (messageNode.length === 1) {
+                messageNode[0].innerHTML = messageHtml
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!--
+        Part 2: Frontend page / JS
+        ------
+        Add JS and styles to perform a fake request from your
+        PHP API, using messase.json as a dummy GET request.
+
+        - Display the message
+        - Styled the message for the front end
+    -->
+    <header>
+        <h1>Message Request</h1>
+    </header>
+    <main>
+        <section>
+
+            <div class="message-request">
+
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>

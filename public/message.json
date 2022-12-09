@@ -1,0 +1,9 @@
+{
+    "id": 9236103,
+    "title": "Staging outage planned",
+    "from": {"first_name": "Bob", "last_name": "Marley"},
+    "to": {"first_name": "Malcolm", "last_name": "X"},
+    "body": "Staging servers will be down for 30 minutes to apply patches.",
+    "created": "2022-12-08T03:00:00Z",
+    "updated": "2022-12-09T16:21:49Z"
+}
